@@ -1,4 +1,4 @@
-const search = (data, inputData) => {
+const searchdata = (data, inputData) => {
     const clearInputData = inputData.split('%20').join(' ');
     const clearArray = [];
     data.forEach((element) => {
@@ -9,4 +9,4 @@ const search = (data, inputData) => {
     });
     return clearArray.slice(0, 8);
   };
-  module.exports = search;
+  module.exports = searchdata;
