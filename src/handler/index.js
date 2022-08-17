@@ -1,4 +1,6 @@
 const { handleNotFound, handleServerError } = require('./error');
-const { autocomplete } = require('./searchData');
+const { autocomplete , getDataApi} = require('./searchData');
 
-module.exports={ handleNotFound, handleServerError  ,autocomplete}
+module.exports={ handleNotFound, handleServerError, getDataApi ,autocomplete }
+
+
