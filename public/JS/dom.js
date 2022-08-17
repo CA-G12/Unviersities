@@ -6,9 +6,8 @@ let list = document.querySelector('.list');
 submitBtn.addEventListener('click', (event)=>{
     const loader = document.createElement('div');
     loader.setAttribute('class','loader');
-    renderSection.append(loader);
-    event.preventDefault();
-
+     renderSection.append(loader); 
+     event.preventDefault();
     fetchData('post',  inputSearch.value,'/searchData',errorHandler,RenderData)
 
 })
@@ -21,7 +20,10 @@ inputSearch.addEventListener('input', (event)=>{
 
 
 function errorHandler(err){
-    // console.log(err);
+    body.textContent = ``;
+    let h1 = document.createElement('h1')
+    h1.innerText = "Error Server"
+    body.appendChild(h1);
 }
 function createListOfSuggestions(data){
     list.textContent = ``;
@@ -37,7 +39,6 @@ function createListOfSuggestions(data){
 }
 function RenderData(data){
     renderSection.textContent=''
-    console.log(data);
     data.forEach(element => {
         const uniData = document.createElement('div');
         uniData.setAttribute('class','uniDiv')

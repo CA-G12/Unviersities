@@ -9,6 +9,9 @@ justify-content: space-around;
 flex-wrap: wrap;
 margin:15px;
 }
+html{
+    scroll-behavior: smooth;
+}
 .uniImg{
     width:100%;
     height: 150px;
@@ -57,7 +60,7 @@ color: white;
   ::-webkit-scrollbar {
     width: 10px;
   }
-  
+   
   /* Track */
   ::-webkit-scrollbar-track {
     background: #f1f1f1; 
@@ -65,7 +68,7 @@ color: white;
    
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: #1a5632; 
+    background: #e3e3e3; 
   }
   
   /* Handle on hover */
@@ -74,15 +77,16 @@ color: white;
   }
 
 .hero{
-    background-image: url("https://www.marywood.edu/application/themes/mint/css/images/home/hero.jpg");
+    background-image: url("./assets/hero.jpg");
     background-attachment: fixed;
-    /* height: 500px; */
     background-size: cover;
     height: 100vh;
     margin-top: 0%;
 }
 nav{
     background-color: #1a5632;
+    display: flex;
+    
 }
 h1{
     width: 40%;
@@ -128,6 +132,7 @@ form{
 
 ul{
     list-style: none;
+    border-bottom: 1px solid #1a5632 ;
 }
 
 .list{
@@ -138,7 +143,10 @@ ul{
     margin: 0 auto;
     margin-left: 20%;
 }
-
+li:hover{
+    background-color: #1a5632;
+    color: #e3e3e3;
+}
 .list-item{
     padding: 10px ;
     text-align: left;
