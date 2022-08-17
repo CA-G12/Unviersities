@@ -1,16 +1,6 @@
-function fetch(method, data, endpoint, errcb, cb){
-    const xhr= new XMLHttpRequest();
-    xhr.onreadystatechange=()=>{
-      if(xhr.readyState===4)
-      {
-        if (xhr.status=200){
-            const responseData=JSON.parse(xhr.responseText);
-            cb(responseData);
-        }else{
-            errcb()
-        }
-      }    
-    }
-  xhr.open(method,endpoint);
-  xhr.send(data);
+function fetchData(method, data, endpoint, errcb, cb){
+  const dataObj = {data}
+    fetch(endpoint,{method: method , body:JSON.stringify(dataObj) ,headers: {
+      'Content-type': 'application/json' // The type of data you're sending
+    }}).then(res=> cb(res)).catch(err=>errcb(err))
 }
