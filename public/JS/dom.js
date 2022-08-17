@@ -1,18 +1,18 @@
 const submitBtn = document.getElementById('submitBtn');
 const inputSearch = document.getElementById('inputSearch');
 
-submitBtn.addEventListener('submit', (event)=>{
+submitBtn.addEventListener('click', (event)=>{
  event.preventDefault();
- fetch('post',  inputSearch.value,'/searchData',errorHandler,RenderData)
+ fetchData('post',  inputSearch.value,'/searchData',errorHandler,RenderData)
 
 })
 
 inputSearch.addEventListener('input', (event)=>{
     event.preventDefault();
-    fetch('post', inputSearch.value,'/inputSreach',errorHandler,createListOfSuggestions)
+    fetchData('post', inputSearch.value,'/inputSreach',errorHandler,createListOfSuggestions)
 })
 
-function errorHandler(){
+function errorHandler(err){
     console.log(err);
 }
 function createListOfSuggestions(data){
