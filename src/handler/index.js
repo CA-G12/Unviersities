@@ -1,4 +1,4 @@
 const { handleNotFound, handleServerError } = require('./error');
-const {  } = require('./public');
+const {  } = require('./searchData');
 
 module.exports={ handleNotFound, handleServerError }
