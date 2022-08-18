@@ -37,9 +37,9 @@ function createListOfSuggestions(data){
         list.appendChild(li);
     }
 }
+
 function RenderData(data){
     renderSection.textContent=''
-    if(data.length!=0){
     data.forEach(element => {
         const uniData = document.createElement('div');
         uniData.setAttribute('class','uniDiv')
@@ -58,11 +58,10 @@ function RenderData(data){
         buttonAnchor.href=element.web_pages[0]
         buttonUni.append(buttonAnchor)
         uniData.append(img, uniName , buttonUni)
-        
-    });}else{
-        const notfound= document.createElement('p')
-        notfound.textContent=`your result not found`
-        renderSection.appendChild(notfound);
-    }
-   
+        renderSection.appendChild(uniData);
+    });
+    window.scrollTo({
+        top: 530,
+        behavior: 'smooth'
+      });
 }
