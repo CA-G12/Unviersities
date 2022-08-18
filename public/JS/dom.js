@@ -59,5 +59,8 @@ function RenderData(data){
         uniData.append(img, uniName , buttonUni)
         renderSection.appendChild(uniData);
     });
-   
+    window.scrollTo({
+        top: 530,
+        behavior: 'smooth'
+      });
 }
